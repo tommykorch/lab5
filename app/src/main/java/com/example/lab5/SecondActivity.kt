@@ -25,6 +25,19 @@ class SecondActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        
+        text=findViewById(R.id.textView4)
+        var result:Int=0
+        when(Selected_Radio){
+            "RadioButton1"->{
+                result=timeValue*2000
+            }
+            "RadioButton2"->{
+                result=timeValue*2500
+            }
+            "RadioButton3"->{
+                result=timeValue*3500
+            }
+        }
+        text.text=result.toString()
     }
 }
